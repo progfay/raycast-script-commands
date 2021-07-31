@@ -3,8 +3,7 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title Local IP Address
-# @raycast.mode inline
-# @raycast.refreshTime 30s
+# @raycast.mode compact
 
 # Optional parameters:
 # @raycast.icon 🌐
@@ -15,5 +14,4 @@
 # @raycast.author progfay
 # @raycast.authorURL https://github.com/progfay
 
-ifconfig | grep 'inet.*broadcast' | awk '{print $2}'
-
+ifconfig | grep 'inet.*broadcast' | awk '{print $2}' | tee >(pbcopy)

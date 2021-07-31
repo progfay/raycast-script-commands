@@ -3,8 +3,7 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title Global IP Address
-# @raycast.mode inline
-# @raycast.refreshTime 30s
+# @raycast.mode compact
 
 # Optional parameters:
 # @raycast.icon 🌐
@@ -15,4 +14,4 @@
 # @raycast.author progfay
 # @raycast.authorURL https://github.com/progfay
 
-curl -4 -s -m 5 ifconfig.co
+curl -4 -s -m 5 ifconfig.co | tee >(pbcopy)
